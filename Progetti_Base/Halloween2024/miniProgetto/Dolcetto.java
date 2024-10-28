@@ -1,6 +1,5 @@
 import java.util.ArrayList;
 import java.util.List;
-import java.util.Scanner;
 
 public class Dolcetto {
     protected int sapore; // Scala da 1 a 10;
@@ -15,16 +14,16 @@ public class Dolcetto {
     }
 
     // Review: Da controllare se forse è meglio mettere gli ingredienti direttamente del costruttore. --> Inoltre meglio vedere se ha senso mettere in input i dati.
-    public void specificaIngredienti(){
-        for(int i = 0; i < NumIngrediente; i++){
-            // Riga 19 e 20 creano l'input.
-            Scanner objScanner = new Scanner(System.in);
-            String ingrediente = objScanner.nextLine();
+    // public void specificaIngredienti(){
+    //     for(int i = 0; i < NumIngrediente; i++){
+    //         // Riga 19 e 20 creano l'input.
+    //         Scanner objScanner = new Scanner(System.in);
+    //         String ingrediente = objScanner.nextLine();
 
-            // Nella lista degli ingredienti aggiungiamo l'ingrediente specifico.
-            ingredienti.add(ingrediente);
-        }
-    }
+    //         // Nella lista degli ingredienti aggiungiamo l'ingrediente specifico.
+    //         ingredienti.add(ingrediente);
+    //     }
+    // }
 
     public void mangia(){
         if(sapore <= 4){
