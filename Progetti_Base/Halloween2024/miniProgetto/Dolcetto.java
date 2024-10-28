@@ -7,6 +7,7 @@ public class Dolcetto {
     protected int NumIngrediente;
     protected List<String> ingredienti = new ArrayList<>(); // Lista degli ingredienti
 
+    // Da cambiare:
     public Dolcetto(int sapore, float peso, int NumIngrediente){
         this.sapore = sapore;
         this.peso = peso;
