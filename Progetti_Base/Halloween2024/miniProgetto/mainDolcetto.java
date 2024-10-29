@@ -10,5 +10,7 @@ public class mainDolcetto {
         Galatina.specificaIngredienti();
         Galatina.mangia();
         Galatina.recensione();
+
+        // Test
     }
 }
