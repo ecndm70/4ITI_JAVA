@@ -1,32 +1,16 @@
-import java.util.ArrayList;
-import java.util.List;
+import java.util.Arrays;
 
 public class Dolcetto {
     protected int sapore; // Scala da 1 a 10;
     protected float peso;
-    protected int NumIngrediente;
-    protected List<String> ingredienti = new ArrayList<>(); // Lista degli ingredienti
+    protected String[] ingredienti; // Array degli ingredienti
 
     // Da cambiare:
-    public Dolcetto(int sapore, float peso, int NumIngrediente){
+    public Dolcetto(int sapore, float peso, String[] ingredienti){
         this.sapore = sapore;
         this.peso = peso;
-        this.NumIngrediente = NumIngrediente;
+        this.ingredienti = ingredienti;
     }
-
-    // TODO: Cambiare il costruttore e rimuovere la funzione 'specificaIngredienti()'.
-
-    // Review: Da controllare se forse è meglio mettere gli ingredienti direttamente del costruttore. --> Inoltre meglio vedere se ha senso mettere in input i dati.
-    // public void specificaIngredienti(){
-    //     for(int i = 0; i < NumIngrediente; i++){
-    //         // Riga 19 e 20 creano l'input.
-    //         Scanner objScanner = new Scanner(System.in);
-    //         String ingrediente = objScanner.nextLine();
-
-    //         // Nella lista degli ingredienti aggiungiamo l'ingrediente specifico.
-    //         ingredienti.add(ingrediente);
-    //     }
-    // }
 
     public void mangia(){
         if(sapore <= 4){
@@ -40,6 +24,6 @@ public class Dolcetto {
 
     // Debug:
     public void print(){
-        System.out.println("ingredienti: " + ingredienti);
+        System.out.println("ingredienti: " + Arrays.toString(ingredienti));
     }
 }

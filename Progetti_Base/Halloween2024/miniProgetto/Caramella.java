@@ -1,8 +1,11 @@
+
+import java.util.Arrays;
+
 public class Caramella extends Dolcetto {
     private int dolcezza; // Scala da 1 a 10;
     
-    public Caramella(int sapore, float peso, int NumIngrediente, int dolcezza){
-        super(sapore, peso, NumIngrediente);
+    public Caramella(int sapore, float peso, String[] ingredienti, int dolcezza){
+        super(sapore, peso, ingredienti);
 
         this.dolcezza = dolcezza;
     }
@@ -20,7 +23,7 @@ public class Caramella extends Dolcetto {
 
     public void recensione(){
         if(ingredienti != null){
-            System.out.println("Questo dolce è composto da:\n" + ingredienti + "\nPesa: " + peso + "g e da una scala da 0 a 10 ha una dolcezza pari a: " + dolcezza);
+            System.out.println("Questo dolce è composto da: " + Arrays.toString(ingredienti) + "\nPesa: " + peso + "g e da una scala da 0 a 10 ha una dolcezza pari a: " + dolcezza);
         }else{
             System.out.println("Questo dolce pesa: " + peso + "g e da una scala da 0 a 10 ha una dolcezza pari a: " + dolcezza);
         }
