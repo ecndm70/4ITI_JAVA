@@ -1,11 +1,9 @@
 
-import java.util.Arrays;
-
 public class Caramella extends Dolcetto {
     private int dolcezza; // Scala da 1 a 10;
     
-    public Caramella(int sapore, float peso, String[] ingredienti, int dolcezza){
-        super(sapore, peso, ingredienti);
+    public Caramella(String nome, int sapore, float peso, String[] ingredienti, int dolcezza){
+        super(nome, sapore, peso, ingredienti);
 
         this.dolcezza = dolcezza;
     }
@@ -13,19 +11,25 @@ public class Caramella extends Dolcetto {
     @Override
     public void mangia(){
         if(dolcezza <= 4){
-            System.out.println("Questa caramella è poco dolce!");
+            System.out.println(nome + " è poco dolce!");
         }else if(dolcezza > 4 && dolcezza <= 8){
-            System.out.println("Questa caramella è neutra!");
+            System.out.println(nome + " è neutra!");
         }else{
-            System.out.println("Questa caramella è dolcissima!");
+            System.out.println(nome + " è dolcissima!");
         }
     }
 
     public void recensione(){
-        if(ingredienti != null){
-            System.out.println("Questo dolce è composto da: " + Arrays.toString(ingredienti) + "\nPesa: " + peso + "g e da una scala da 0 a 10 ha una dolcezza pari a: " + dolcezza);
+        String listaIngr = String.join(",", ingredienti);
+        System.out.print(nome + " è composto da: " + listaIngr + ".");
+
+        System.out.println(" pesa: " + peso + "g ed è");
+        if(dolcezza <= 4){
+            System.out.println("per niente dolce.");
+        }else if(dolcezza > 4 && dolcezza <= 8){
+            System.out.println("poco dolce.");
         }else{
-            System.out.println("Questo dolce pesa: " + peso + "g e da una scala da 0 a 10 ha una dolcezza pari a: " + dolcezza);
+            System.out.println("molto dolce.");
         }
     }
 }
