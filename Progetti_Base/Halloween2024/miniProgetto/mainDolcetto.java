@@ -5,7 +5,6 @@ public class mainDolcetto {
         Caramella Galatina = new Caramella("Galatina", 9, 10, new String[]{"Latte"}, 2);
 
         biscottoClassico.mangia();
-        biscottoClassico.print();
 
         Galatina.mangia();
         Galatina.recensione();

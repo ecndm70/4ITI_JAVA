@@ -1,4 +1,3 @@
-import java.util.Arrays;
 
 public class Dolcetto {
     protected String nome;
@@ -25,10 +24,5 @@ public class Dolcetto {
         }else{
             System.out.println(nome + " è buonissimo!");
         }
-    }
-
-    // Debug:
-    public void print(){
-        System.out.println("ingredienti: " + Arrays.toString(ingredienti));
     }
 }
