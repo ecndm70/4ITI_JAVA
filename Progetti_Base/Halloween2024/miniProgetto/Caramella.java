@@ -1,6 +1,6 @@
 public class Caramella extends Dolcetto {
     private int dolcezza; // Scala da 1 a 10;
-    
+
     public Caramella(int sapore, float peso, int NumIngrediente, int dolcezza){
         super(sapore, peso, NumIngrediente);
 
