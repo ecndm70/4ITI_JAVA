@@ -14,6 +14,7 @@ public class Dolcetto {
 
 	public void mangia(){
 		String stringPiacere;
+
 		if(sapore <= 4){
 			stringPiacere = "non è nulla di che!";
 		}else if(sapore > 4 && sapore <= 8){
