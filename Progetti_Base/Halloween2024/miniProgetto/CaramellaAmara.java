@@ -32,7 +32,7 @@ public class CaramellaAmara extends Dolcetto {
 			String listaIngr = String.join(", ", ingredienti);
 			System.out.println(nome + " è composto da: " + listaIngr + ". Pesa " + peso + " grammi, ed " + stringPiacere);
 		}else{
-			System.out.println(nome + " è troppo amara, non ci riprovo!");
+			System.out.println(nome + " è troppo amara, non ci riprovo a mangiarla!");
 		}
 	}
 }
