@@ -1,12 +1,12 @@
 public class mainDolcetto {
-    public static void main(String[] args) {
-        
-        Dolcetto biscottoClassico = new Dolcetto("Nutella Biscuits", 5, 10, new String[]{"Cioccolato", "Latte", "Zucchero"});
-        Caramella Galatina = new Caramella("Galatina", 9, 10, new String[]{"Latte"}, 2);
+	public static void main(String[] args) {
 
-        biscottoClassico.mangia();
+		Dolcetto biscottoClassico = new Dolcetto("Nutella Biscuits", 5, 10, new String[]{"Cioccolato", "Latte", "Zucchero"});
+		Caramella Galatina = new Caramella("Galatina", 9, 10, new String[]{"Latte"}, 10);
 
-        Galatina.mangia();
-        Galatina.recensione();
-    }   
+		biscottoClassico.mangia();
+
+		Galatina.mangia();
+		Galatina.recensione();
+	}
 }
