@@ -1,9 +1,9 @@
 public class Caramella extends Dolcetto {
-	private int dolcezza; // Scala da 1 a 10;
+    private int dolcezza; // Scala da 1 a 10;
 	private boolean scartato;
 
-	public Caramella(String nome, int sapore, float peso, String[] ingredienti, int dolcezza){
-		super(nome, sapore, peso, ingredienti);
+    public Caramella(String nome, int sapore, float peso, String[] ingredienti, int dolcezza){
+        super(nome, sapore, peso, ingredienti);
 
 		this.dolcezza = dolcezza;
 	}
