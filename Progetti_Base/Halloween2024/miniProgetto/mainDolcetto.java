@@ -1,16 +1,19 @@
 public class mainDolcetto {
-    public static void main(String[] args) {
-        Dolcetto biscottoClassico = new Dolcetto(5, 10, 2);
-        Caramella Galatina = new Caramella(9, 10, 1, 10);
+	public static void main(String[] args) {
 
-        biscottoClassico.specificaIngredienti();
-        biscottoClassico.mangia();
-        biscottoClassico.print();
+		Dolcetto biscottoClassico = new Dolcetto("Nutella Biscuits", 5, 10, new String[]{"Cioccolato", "Latte", "Zucchero"});
+		Caramella Galatina = new Caramella("Galatina", 9, 10, new String[]{"Latte"}, 10);
+		CaramellaAmara Liquirizia = new CaramellaAmara("Liquirizia", 2, 30, new String[]{"liquirizia"}, 10);
 
-        Galatina.specificaIngredienti();
-        Galatina.mangia();
-        Galatina.recensione();
+		// Di Dolcetto:
+		biscottoClassico.mangia();
 
-        // Test
-    }
+		// Di Caramella:
+		Galatina.scarta();
+		Galatina.mangia();
+
+		// Di CaramellaAmara:
+		Liquirizia.mangia();
+		Liquirizia.mangia();
+	}
 }

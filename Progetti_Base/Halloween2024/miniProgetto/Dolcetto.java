@@ -1,43 +1,29 @@
-import java.util.ArrayList;
-import java.util.List;
-import java.util.Scanner;
-
 public class Dolcetto {
-    protected int sapore; // Scala da 1 a 10;
-    protected float peso;
-    protected int NumIngrediente;
-    protected List<String> ingredienti = new ArrayList<>(); // Lista degli ingredienti
+	protected String nome;
+	protected int sapore; // Scala da 1 a 10;
+	protected float peso;
+	protected String[] ingredienti; // Array degli ingredienti
 
-    public Dolcetto(int sapore, float peso, int NumIngrediente){
-        this.sapore = sapore;
-        this.peso = peso;
-        this.NumIngrediente = NumIngrediente;
-    }
+	// Da cambiare:
+	public Dolcetto(String nome, int sapore, float peso, String[] ingredienti){
+		this.nome = nome;
+		this.sapore = sapore;
+		this.peso = peso;
+		this.ingredienti = ingredienti;
+	}
 
-    // Review: Da controllare se forse è meglio mettere gli ingredienti direttamente del costruttore. --> Inoltre meglio vedere se ha senso mettere in input i dati.
-    public void specificaIngredienti(){
-        for(int i = 0; i < NumIngrediente; i++){
-            // Riga 19 e 20 creano l'input.
-            Scanner objScanner = new Scanner(System.in);
-            String ingrediente = objScanner.nextLine();
+	public void mangia(){
+		String stringPiacere;
 
-            // Nella lista degli ingredienti aggiungiamo l'ingrediente specifico.
-            ingredienti.add(ingrediente);
-        }
-    }
+		if(sapore <= 4){
+			stringPiacere = "non è nulla di che!";
+		}else if(sapore > 4 && sapore <= 8){
+			stringPiacere = "è abbastanza buono!";
+		}else{
+			stringPiacere = "è buonissimo!";
+		}
 
-    public void mangia(){
-        if(sapore <= 4){
-            System.out.println("Questo dolcetto non è nulla di che!");
-        }else if(sapore > 4 && sapore <= 8){
-            System.out.println("Questo dolcetto è abbastanza buono!");
-        }else{
-            System.out.println("Questo dolcetto è buonissimo!");
-        }
-    }
-
-    // Debug:
-    public void print(){
-        System.out.println("ingredienti: " + ingredienti);
-    }
+		String listaIngr = String.join(", ", ingredienti);
+		System.out.println(nome + " è composto da: " + listaIngr + ". Pesa " + peso + " grammi, ed " + stringPiacere);
+	}
 }
